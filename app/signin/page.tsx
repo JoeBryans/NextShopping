@@ -1,10 +1,12 @@
 import Button from '@/components/Button'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
   return (
     <div className=' h-[100vh] flex items-center justify-center'>
-        <form className='max-w-md flex flex-col gap-4 bg-slate-300 drop-shadow-lg p-4 text-white'>
+        <form className='max-w-md flex flex-col gap-4 bg-slate-300 drop-shadow-lg p-4 relative '>
+          <h3 className='text-center text-2xl font-bold'>Signin</h3>  
   <label className="input input-bordered flex items-center  gap-2">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +34,12 @@ const page = () => {
     </svg>
     <input type="password" className="grow text-white" placeholder="password" />
   </label>
-  <Button value="Singin"/>
+  <Link href="" className='absolute right-5 underline bottom-[6.5rem] mb-1'>Forgot password</Link>
+ <div className=' mt-3'>
+ <Button value="Signin"/>
+ </div>
+  <span>Don't have an account? <Link href="/signup" className='underline'>Signup</Link></span>
+
   </form></div>
   )
 }
