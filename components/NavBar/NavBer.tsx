@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import * as FaIcons from "react-icons/fa"
 import * as MdIcons from "react-icons/md"
+import Search from './Search'
 const NavBer = () => {
   return (
     <div className="navbar bg-slate-300 shadow-lg text-slate-700 lg:px-28 ">
@@ -9,13 +10,8 @@ const NavBer = () => {
    
       <Link href="/" className="btn btn-ghost text-xl">Shoppify</Link>
     </div>
-    <div className="navbar-center hidden lg:flex ">
-    <form className="  rounded-lg w-96 shadow-md ">
-      <div className="flex w-full justify-between items-center p-2">
-      <input type="text" placeholder="Search" className="  w-36 p-2 rounded border-none focus:outline-0  md:w-60 bg-transparent text-slate-700" />
-      <FaIcons.FaSearch size={30} className='cursor-pointer'/>
-   {/* <button className='btn bg-red-800 w-fit font-semibold text-white h-10 text-center'>Search</button> */}
-   </div>  </form>
+    <div className="navbar-center  ">
+    <Search/>
     </div>
     <div className="navbar-end mx-2 gap-5">
          <ul className=" px-1 hidden lg:flex items-center gap-4">
@@ -37,18 +33,7 @@ const NavBer = () => {
     
     <div className="dropdown relative">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
+        <FaIcons.FaBars size={25}/>
         </div>
         <ul
           tabIndex={0}
