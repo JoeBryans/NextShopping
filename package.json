@@ -11,8 +11,12 @@
   "dependencies": {
     "@clerk/nextjs": "^6.8.0",
     "@hookform/resolvers": "^3.9.1",
+    "@types/bcrypt": "^5.0.2",
     "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "mongoose": "^8.8.4",
     "next": "15.0.4",
+    "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.0",

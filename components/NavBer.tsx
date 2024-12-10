@@ -1,29 +1,39 @@
 import Link from 'next/link'
 import React from 'react'
-
+import * as FaIcons from "react-icons/fa"
+import * as MdIcons from "react-icons/md"
 const NavBer = () => {
   return (
     <div className="navbar bg-slate-300 shadow-lg text-slate-700 lg:px-28 ">
     <div className="navbar-start">
    
-      <a className="btn btn-ghost text-xl">Shoppify</a>
+      <Link href="/" className="btn btn-ghost text-xl">Shoppify</Link>
     </div>
     <div className="navbar-center hidden lg:flex ">
-    <form className=" bg-[#2084A2] rounded-lg w-96  ">
-      <div className="flex w-full justify-between px-2">
-      <input type="text" placeholder="Search" className="input shadow-md w-24  md:w-60 bg-transparent text-slate-700" />
-   <button className='btn bg-red-800 w-fit font-semibold text-white h-10 text-center'>Search</button>
+    <form className="  rounded-lg w-96 shadow-md ">
+      <div className="flex w-full justify-between items-center p-2">
+      <input type="text" placeholder="Search" className="  w-36 p-2 rounded border-none focus:outline-0  md:w-60 bg-transparent text-slate-700" />
+      <FaIcons.FaSearch size={30} className='cursor-pointer'/>
+   {/* <button className='btn bg-red-800 w-fit font-semibold text-white h-10 text-center'>Search</button> */}
    </div>  </form>
     </div>
     <div className="navbar-end mx-2 gap-5">
-         <ul className=" px-1 hidden lg:flex gap-4">
+         <ul className=" px-1 hidden lg:flex items-center gap-4">
          <li><Link href="">Order</Link></li>
           <li><Link href="">Saved</Link></li>
           <li><Link href="">Inbox</Link></li>
           
       </ul>
-      <a className="btn rounded-full">Cart</a>
-      <a className="btn rounded-lg hidden lg:flex">singin</a>
+      <div className="relative">
+        
+      <Link href='' className=" hidden lg:flex">
+        <span className='absolute -top-2 left-6 z-20 font-bold text-xl  text-white'>20</span>
+  {/* <FaIcons.FaShoppingBasket size={40} className='cursor-pointer'/> */}
+  <MdIcons.MdOutlineShoppingBasket size={40} className='cursor-pointer'/>
+
+</Link>
+      </div>
+      <Link href='/signin' className=" rounded-lg hidden lg:flex">singin</Link>
     
     <div className="dropdown relative">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
